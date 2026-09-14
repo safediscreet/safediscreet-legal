@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeDiscreet — Privacy Policy</title>
+<meta name="description" content="SafeDiscreet's privacy policy. SafeDiscreet has no servers and collects no personal data.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <p class="wordmark">SafeDiscreet</p>
+  <h1 data-doc-title>Privacy Policy</h1>
+  <p class="dates">Effective 14 September 2026 · Last updated 14 September 2026</p>
+  <nav class="langbar">
+    <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-set-lang="tr" aria-pressed="false">Türkçe</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- ══════════════════════════ ENGLISH ══════════════════════════ -->
+<section data-lang="en" class="is-active">
+
+  <div class="lede">
+    <p><strong>SafeDiscreet has no servers, no accounts and no analytics.</strong> It does not create a profile of you, it does not track you, and it shows no advertising. Nothing you record leaves your iPhone unless you deliberately export or share it yourself.</p>
+    <p>This policy explains what that means in practice, and what the app does keep on your device.</p>
+  </div>
+
+  <h2>1. Who this policy is from</h2>
+  <p>SafeDiscreet is published by <span class="todo">[Developer legal name]</span> (“we”, “us”). Questions about this policy can be sent to <span class="todo">[support@yourdomain.com]</span>.</p>
+
+  <h2>2. Personal data we collect: none</h2>
+  <p>We do not collect, receive, store or process any personal data about you. Specifically, SafeDiscreet:</p>
+  <ul>
+    <li>has no user accounts, sign-in, email capture or registration of any kind;</li>
+    <li>contains no analytics, crash-reporting, advertising or attribution software;</li>
+    <li>contains no third-party SDKs of any kind, and has no server of ours to talk to;</li>
+    <li>does not read your contacts, calendar, messages, health data or photo library;</li>
+    <li>does not collect a device identifier, advertising identifier or IP address.</li>
+  </ul>
+  <p>Because we hold nothing about you, there is no database for us to search, disclose, sell or lose.</p>
+  <p>SafeDiscreet does use two of Apple's own services, and only these two: Apple Maps, to draw the small map on a recording's detail screen, and Apple's geocoding service, to turn a recorded coordinate into a readable place name such as a street or district. Both are described in section 4. They are requests from your device to Apple, handled under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>; we neither see nor receive anything from them.</p>
+
+  <h2>3. What the app stores on your device</h2>
+  <p>Everything below stays on your iPhone. It is not transmitted to us or to anyone else.</p>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>What</th><th>Where it is kept</th><th>Protection</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Video and photos captured on the free tier</td>
+        <td>Your own Photos library</td>
+        <td>Whatever you have set for Photos, including iCloud Photos if you use it</td>
+      </tr>
+      <tr>
+        <td>Audio captured on the free tier</td>
+        <td>SafeDiscreet's private app container — the Photos library cannot hold audio files</td>
+        <td>iOS Data Protection, and excluded from iCloud and iTunes backups</td>
+      </tr>
+      <tr>
+        <td>Recordings saved to the vault (Premium)</td>
+        <td>SafeDiscreet's private app container</td>
+        <td>iOS Data Protection (<em>complete</em>), and excluded from iCloud and iTunes backups</td>
+      </tr>
+      <tr>
+        <td>Recording details: date, time, duration, file size, optional coordinates, the place name those coordinates resolve to, integrity hash</td>
+        <td>A metadata file beside each recording, in the same private container</td>
+        <td>Same as above</td>
+      </tr>
+      <tr>
+        <td>Your app preferences: capture mode, quality, whether you have completed onboarding and seen the intro screens</td>
+        <td>Standard iOS app preferences</td>
+        <td>Standard app-container protection</td>
+      </tr>
+      <tr>
+        <td>A count of failed vault unlock attempts, and the time until which entry is paused after too many</td>
+        <td>Standard iOS app preferences</td>
+        <td>Standard app-container protection</td>
+      </tr>
+      <tr>
+        <td>Your vault passcode and, if you set one, your second access code</td>
+        <td>iOS Keychain, as a salted one-way hash — never the code itself</td>
+        <td>Available only when your device passcode is set, and marked so it never syncs to another device</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Deleting SafeDiscreet removes the app container, and with it the vault, its metadata and your preferences. Recordings that were saved to Photos stay in Photos, because they belong to your library and not to the app.</p>
+
+  <h2>4. Permissions, and what each one is used for</h2>
+  <ul>
+    <li><strong>Camera</strong> — used only while you are recording or previewing on the recorder screen. SafeDiscreet never runs the camera in the background.</li>
+    <li><strong>Microphone</strong> — used only while a video or audio recording is running.</li>
+    <li><strong>Location (while using the app)</strong> — optional, and a Premium feature. When enabled, the coordinates and time of capture are written <em>into the recording file itself</em>, in the same standard fields the system Camera app uses. If you do not grant this permission, or you are on the free tier, no location is recorded at all.
+      <br>Two things happen with that coordinate beyond writing it into the file, and both go to Apple rather than to us: it is sent to Apple's geocoding service to obtain a readable place name, which is then stored alongside the recording; and when you open a recording that has a location, the detail screen loads map tiles for that area from Apple Maps. Nothing about your location reaches us at any point.</li>
+    <li><strong>Photos (add only)</strong> — SafeDiscreet requests <em>add-only</em> access, which lets it place a file into your library but never lets it read your library. If you use the optional “Import from library” feature, the items you pick are handed to the app by the system picker, which runs outside the app; SafeDiscreet still cannot browse anything you did not choose.</li>
+    <li><strong>Face ID / Touch ID</strong> — handled entirely by iOS. SafeDiscreet asks the system to authenticate you and receives only a yes or no. Your biometric data never leaves the Secure Enclave and is never available to the app.</li>
+  </ul>
+  <p>Every one of these can be changed at any time in Settings ▸ SafeDiscreet. Camera and Microphone are the only two the app cannot function without.</p>
+
+  <h2>5. Subscriptions and payments</h2>
+  <p>SafeDiscreet Premium is an auto-renewable subscription sold and processed by Apple. Payment is handled by the App Store under your Apple Account. We never see your name, card details, billing address or Apple Account email; we receive only anonymous, aggregated sales reports from Apple.</p>
+  <p>The app asks Apple's on-device subscription service whether an active subscription exists, and that answer alone decides which features are available. This check does not involve any server of ours.</p>
+
+  <h2>6. When data does leave your device</h2>
+  <p>Three cases, and in none of them does anything reach us:</p>
+  <ul>
+    <li><strong>Saving to Photos.</strong> On the free tier this is where video and photos are saved. Once a file is in your Photos library, your own Photos and iCloud settings govern it.</li>
+    <li><strong>Exporting or sharing.</strong> The export button hands the file to the standard iOS share sheet so you can send it to a lawyer, a colleague, a cloud drive or anywhere else. Once a file leaves SafeDiscreet, its protection is whatever the destination provides. We have no visibility into and no control over what happens to it afterwards.</li>
+    <li><strong>Apple Maps and geocoding.</strong> As described in section 4, a coordinate you chose to record is sent to Apple to resolve a place name and to draw a map. This is a request from your device to Apple, under Apple's terms, and it never involves us. It happens only for recordings that have a location — which means never on the free tier, and never if you declined the location permission.</li>
+  </ul>
+
+  <h2>7. Children</h2>
+  <p>SafeDiscreet is not directed at children and is not intended for use by anyone under 13. We do not knowingly collect information from children — and since we collect no information from anyone, there is nothing for us to hold or delete.</p>
+
+  <h2>8. Your rights</h2>
+  <p>Data-protection laws including the EU/UK GDPR, Türkiye's KVKK and the California Consumer Privacy Act give you rights to access, correct, delete and port your personal data, and to object to its processing.</p>
+  <p>These rights are directed at whoever holds your data. In SafeDiscreet's case that is only you: your recordings are on your own device, under your own control, and we hold no copy. You can exercise all of them yourself — delete an individual recording inside the vault, or delete the app to remove everything it stored. We cannot delete your data on request, because we do not have it.</p>
+  <p>If you believe this description is inaccurate, or you want to ask a question about it, write to <span class="todo">[support@yourdomain.com]</span> and we will respond within 30 days.</p>
+
+  <h2>9. Security, honestly stated</h2>
+  <p>Vault files are protected by iOS Data Protection, which ties the encryption key to your device passcode; the vault is unlocked with Face ID, Touch ID or your device passcode, and optionally a separate app passcode you set. Each file's SHA-256 digest is recorded when it is saved, so you can later check whether that file has changed.</p>
+  <div class="callout">
+    <p>What this does <em>not</em> do: it is not a guarantee against a determined attacker with physical access to an unlocked device, it is not a third-party certification of your recording, and it cannot protect a file after you export it. No security measure is absolute, and we do not claim otherwise.</p>
+  </div>
+
+  <h2>10. Changes to this policy</h2>
+  <p>If this policy changes, the new version is published at this address with a new “last updated” date. Material changes will also be summarised in the app's release notes. Continuing to use SafeDiscreet after a change means you accept the updated policy.</p>
+
+  <h2>11. Contact</h2>
+  <p><span class="todo">[support@yourdomain.com]</span></p>
+
+</section>
+
+<!-- ══════════════════════════ TÜRKÇE ══════════════════════════ -->
+<section data-lang="tr">
+
+  <div class="lede">
+    <p><strong>SafeDiscreet'ün sunucusu, kullanıcı hesabı ve analitiği yoktur.</strong> Sizin profilinizi çıkarmaz, sizi takip etmez ve reklam göstermez. Kaydettiğiniz hiçbir şey, siz bilerek dışa aktarmadığınız ya da paylaşmadığınız sürece iPhone'unuzdan çıkmaz.</p>
+    <p>Bu politika, bunun pratikte ne anlama geldiğini ve uygulamanın cihazınızda neleri sakladığını açıklar.</p>
+  </div>
+
+  <h2>1. Bu politika kime ait</h2>
+  <p>SafeDiscreet, <span class="todo">[Geliştiricinin yasal adı]</span> tarafından yayımlanmaktadır (“biz”). Bu politikayla ilgili sorularınızı <span class="todo">[destek@alanadiniz.com]</span> adresine iletebilirsiniz.</p>
+
+  <h2>2. Topladığımız kişisel veri: yok</h2>
+  <p>Sizinle ilgili hiçbir kişisel veriyi toplamıyor, almıyor, saklamıyor veya işlemiyoruz. Somut olarak SafeDiscreet:</p>
+  <ul>
+    <li>kullanıcı hesabı, oturum açma, e-posta toplama veya herhangi bir kayıt adımı içermez;</li>
+    <li>analitik, çökme raporlama, reklam veya atıf (attribution) yazılımı içermez;</li>
+    <li>hiçbir üçüncü taraf SDK'sı içermez ve konuşacağı bir sunucumuz yoktur;</li>
+    <li>rehberinizi, takviminizi, mesajlarınızı, sağlık verilerinizi veya fotoğraf kitaplığınızı okumaz;</li>
+    <li>cihaz tanımlayıcısı, reklam tanımlayıcısı veya IP adresi toplamaz.</li>
+  </ul>
+  <p>Elimizde size ait hiçbir şey olmadığı için, arayabileceğimiz, paylaşabileceğimiz, satabileceğimiz ya da kaybedebileceğimiz bir veri tabanı da yoktur.</p>
+  <p>SafeDiscreet, Apple'ın kendi servislerinden yalnızca ikisini kullanır: bir kaydın ayrıntı ekranındaki küçük haritayı çizmek için Apple Haritalar ve kaydedilmiş bir koordinatı sokak ya da semt gibi okunabilir bir yer adına çevirmek için Apple'ın coğrafi kodlama servisi. Her ikisi de 4. bölümde açıklanmıştır. Bunlar cihazınızdan Apple'a giden isteklerdir ve <a href="https://www.apple.com/legal/privacy/">Apple'ın gizlilik politikası</a> kapsamındadır; biz ne görürüz ne de bir şey alırız.</p>
+
+  <h2>3. Uygulamanın cihazınızda sakladıkları</h2>
+  <p>Aşağıdakilerin tamamı iPhone'unuzda kalır. Bize ya da başka birine iletilmez.</p>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Ne</th><th>Nerede tutulur</th><th>Koruma</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Ücretsiz sürümde çekilen video ve fotoğraflar</td>
+        <td>Kendi Fotoğraflar kitaplığınız</td>
+        <td>Fotoğraflar için yaptığınız ayarlar — iCloud Fotoğraflar kullanıyorsanız o da dahil</td>
+      </tr>
+      <tr>
+        <td>Ücretsiz sürümde alınan ses kayıtları</td>
+        <td>SafeDiscreet'ün özel uygulama alanı — Fotoğraflar kitaplığı ses dosyası tutamaz</td>
+        <td>iOS Veri Koruması ve iCloud/iTunes yedeklerinin dışında tutulur</td>
+      </tr>
+      <tr>
+        <td>Kasaya kaydedilen kayıtlar (Premium)</td>
+        <td>SafeDiscreet'ün özel uygulama alanı</td>
+        <td>iOS Veri Koruması (<em>complete</em>) ve iCloud/iTunes yedeklerinin dışında tutulur</td>
+      </tr>
+      <tr>
+        <td>Kayıt bilgileri: tarih, saat, süre, dosya boyutu, isteğe bağlı koordinatlar, bu koordinatların karşılık geldiği yer adı, bütünlük özeti</td>
+        <td>Her kaydın yanındaki bir meta veri dosyasında, aynı özel alanda</td>
+        <td>Yukarıdakiyle aynı</td>
+      </tr>
+      <tr>
+        <td>Uygulama tercihleriniz: çekim modu, kalite, tanıtım akışını tamamlayıp tamamlamadığınız</td>
+        <td>Standart iOS uygulama tercihleri</td>
+        <td>Standart uygulama alanı koruması</td>
+      </tr>
+      <tr>
+        <td>Başarısız kasa açma denemelerinin sayısı ve çok fazla denemeden sonra girişin duraklatıldığı süre</td>
+        <td>Standart iOS uygulama tercihleri</td>
+        <td>Standart uygulama alanı koruması</td>
+      </tr>
+      <tr>
+        <td>Kasa şifreniz ve varsa ikinci erişim kodunuz</td>
+        <td>iOS Anahtar Zinciri'nde, tuzlanmış tek yönlü özet olarak — kodun kendisi asla saklanmaz</td>
+        <td>Yalnızca cihaz şifreniz tanımlıysa erişilebilir ve başka bir cihaza asla eşitlenmeyecek şekilde işaretlenir</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>SafeDiscreet'ü silmek uygulama alanını da siler; kasa, meta verileri ve tercihleriniz onunla birlikte gider. Fotoğraflar'a kaydedilmiş kayıtlar Fotoğraflar'da kalır, çünkü onlar uygulamaya değil sizin kitaplığınıza aittir.</p>
+
+  <h2>4. İzinler ve her birinin ne için kullanıldığı</h2>
+  <ul>
+    <li><strong>Kamera</strong> — yalnızca kayıt ekranındayken, kayıt alırken veya önizleme sırasında kullanılır. SafeDiscreet kamerayı arka planda asla çalıştırmaz.</li>
+    <li><strong>Mikrofon</strong> — yalnızca bir video veya ses kaydı sürerken kullanılır.</li>
+    <li><strong>Konum (uygulama kullanılırken)</strong> — isteğe bağlıdır ve Premium özelliğidir. Etkinleştirildiğinde çekim anının koordinatları ve saati <em>doğrudan kayıt dosyasının içine</em>, sistem Kamera uygulamasının kullandığı standart alanlara yazılır. Bu izni vermezseniz ya da ücretsiz sürümdeyseniz hiçbir konum kaydedilmez.
+      <br>Koordinatla, dosyaya yazılmasının ötesinde iki şey daha olur ve ikisi de bize değil Apple'a gider: okunabilir bir yer adı elde etmek için Apple'ın coğrafi kodlama servisine gönderilir ve dönen yer adı kaydın yanında saklanır; konumu olan bir kaydı açtığınızda ayrıntı ekranı o bölgenin harita karolarını Apple Haritalar'dan yükler. Konumunuza dair hiçbir şey hiçbir aşamada bize ulaşmaz.</li>
+    <li><strong>Fotoğraflar (yalnızca ekleme)</strong> — SafeDiscreet <em>yalnızca ekleme</em> izni ister; bu izin kitaplığınıza dosya koymasına izin verir, kitaplığınızı okumasına asla izin vermez. İsteğe bağlı “Kitaplıktan içe aktar” özelliğini kullanırsanız, seçtiğiniz öğeler uygulamanın dışında çalışan sistem seçicisi tarafından uygulamaya verilir; SafeDiscreet yine de sizin seçmediğiniz hiçbir şeye bakamaz.</li>
+    <li><strong>Face ID / Touch ID</strong> — tamamen iOS tarafından yürütülür. SafeDiscreet sistemden sizi doğrulamasını ister ve yalnızca evet/hayır cevabını alır. Biyometrik verileriniz Secure Enclave'den hiç çıkmaz ve uygulamaya hiçbir zaman açılmaz.</li>
+  </ul>
+  <p>Bunların hepsini istediğiniz zaman Ayarlar ▸ SafeDiscreet üzerinden değiştirebilirsiniz. Uygulamanın onlarsız çalışamadığı tek iki izin Kamera ve Mikrofon'dur.</p>
+
+  <h2>5. Abonelikler ve ödemeler</h2>
+  <p>SafeDiscreet Premium, Apple tarafından satılan ve işlenen, otomatik yenilenen bir aboneliktir. Ödeme, Apple Hesabınız üzerinden App Store tarafından yürütülür. Adınızı, kart bilgilerinizi, fatura adresinizi veya Apple Hesabı e-postanızı hiçbir zaman görmeyiz; Apple'dan yalnızca anonim ve toplulaştırılmış satış raporları alırız.</p>
+  <p>Uygulama, aktif bir aboneliğin olup olmadığını Apple'ın cihaz üzerindeki abonelik servisine sorar ve hangi özelliklerin açık olacağına yalnızca bu cevap karar verir. Bu kontrol bizim herhangi bir sunucumuzu içermez.</p>
+
+  <h2>6. Verinin cihazınızdan çıktığı durumlar</h2>
+  <p>Üç durum var ve hiçbirinde bize bir şey ulaşmaz:</p>
+  <ul>
+    <li><strong>Fotoğraflar'a kaydetme.</strong> Ücretsiz sürümde video ve fotoğraflar buraya kaydedilir. Dosya Fotoğraflar kitaplığınıza girdikten sonra, kendi Fotoğraflar ve iCloud ayarlarınız geçerli olur.</li>
+    <li><strong>Dışa aktarma veya paylaşma.</strong> Dışa aktarma düğmesi dosyayı standart iOS paylaşım sayfasına verir; böylece bir avukata, bir meslektaşınıza, bir bulut sürücüsüne ya da istediğiniz yere gönderebilirsiniz. Bir dosya SafeDiscreet'ten çıktıktan sonra koruması, gittiği yerin sağladığı korumadır. Sonrasında başına ne geldiğini ne görebiliriz ne de kontrol edebiliriz.</li>
+    <li><strong>Apple Haritalar ve coğrafi kodlama.</strong> 4. bölümde anlatıldığı gibi, kaydetmeyi seçtiğiniz bir koordinat yer adını çözmek ve haritayı çizmek için Apple'a gönderilir. Bu, cihazınızdan Apple'a giden ve Apple'ın koşullarına tabi olan bir istektir; bizi hiç ilgilendirmez. Yalnızca konumu olan kayıtlar için gerçekleşir — yani ücretsiz sürümde hiç, konum iznini vermediyseniz de hiç.</li>
+  </ul>
+
+  <h2>7. Çocuklar</h2>
+  <p>SafeDiscreet çocuklara yönelik değildir ve 13 yaşın altındaki kişilerin kullanımı için tasarlanmamıştır. Çocuklardan bilerek bilgi toplamayız — kimseden bilgi toplamadığımız için de saklayacağımız ya da sileceğimiz bir şey yoktur.</p>
+
+  <h2>8. Haklarınız</h2>
+  <p>AB/BK GDPR, Türkiye'de KVKK ve California Tüketici Gizliliği Yasası dahil olmak üzere veri koruma mevzuatı size kişisel verilerinize erişme, düzeltme, silme ve taşıma; işlenmesine itiraz etme hakları tanır.</p>
+  <p>Bu haklar, verinizi elinde tutan tarafa yöneliktir. SafeDiscreet söz konusu olduğunda bu taraf yalnızca sizsiniz: kayıtlarınız kendi cihazınızda, kendi kontrolünüzdedir ve bizde hiçbir kopyası yoktur. Hepsini kendiniz kullanabilirsiniz — kasadaki tek bir kaydı silin ya da uygulamayı silerek sakladığı her şeyi kaldırın. Talep üzerine verinizi silemeyiz, çünkü elimizde değildir.</p>
+  <p>Bu açıklamanın hatalı olduğunu düşünüyorsanız veya bir sorunuz varsa <span class="todo">[destek@alanadiniz.com]</span> adresine yazın; 30 gün içinde yanıt veririz.</p>
+
+  <h2>9. Güvenlik, olduğu gibi</h2>
+  <p>Kasa dosyaları, şifreleme anahtarını cihaz şifrenize bağlayan iOS Veri Koruması ile korunur; kasa Face ID, Touch ID veya cihaz şifrenizle ve isteğe bağlı olarak belirlediğiniz ayrı bir uygulama şifresiyle açılır. Her dosyanın SHA-256 özeti kaydedildiği anda alınır; böylece o dosyanın sonradan değişip değişmediğini kontrol edebilirsiniz.</p>
+  <div class="callout">
+    <p>Bunun yapmadığı şey: kilidi açık bir cihaza fiziksel erişimi olan kararlı bir saldırgana karşı garanti değildir, kaydınızın üçüncü taraf sertifikasyonu değildir ve dışa aktardıktan sonra dosyayı koruyamaz. Hiçbir güvenlik önlemi mutlak değildir ve aksini iddia etmiyoruz.</p>
+  </div>
+
+  <h2>10. Bu politikadaki değişiklikler</h2>
+  <p>Politika değişirse yeni sürüm bu adreste, yeni bir “son güncelleme” tarihiyle yayımlanır. Esaslı değişiklikler ayrıca uygulamanın sürüm notlarında özetlenir. Değişiklikten sonra SafeDiscreet'ü kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
+
+  <h2>11. İletişim</h2>
+  <p><span class="todo">[destek@alanadiniz.com]</span></p>
+
+</section>
+
+</main>
+
+<footer>
+  <p><a href="terms.html" data-terms-link>Terms of Use</a> · <a href="index.html" data-home-link>Home</a></p>
+</footer>
+
+<script>
+(function () {
+  var titles = { en: "Privacy Policy", tr: "Gizlilik Politikası" };
+  var terms  = { en: "Terms of Use",   tr: "Kullanım Koşulları" };
+  var home   = { en: "Home",           tr: "Ana sayfa" };
+
+  function apply(lang) {
+    document.querySelectorAll("[data-lang]").forEach(function (el) {
+      el.classList.toggle("is-active", el.getAttribute("data-lang") === lang);
+    });
+    document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-set-lang") === lang ? "true" : "false");
+    });
+    document.documentElement.lang = lang;
+    document.querySelector("[data-doc-title]").textContent = titles[lang];
+    document.querySelector("[data-terms-link]").textContent = terms[lang];
+    document.querySelector("[data-home-link]").textContent = home[lang];
+    try { localStorage.setItem("sv-lang", lang); } catch (e) {}
+  }
+
+  var saved;
+  try { saved = localStorage.getItem("sv-lang"); } catch (e) {}
+  var initial = saved || ((navigator.language || "en").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+  apply(initial);
+
+  document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+    btn.addEventListener("click", function () { apply(btn.getAttribute("data-set-lang")); });
+  });
+})();
+</script>
+
+</body>
+</html>
