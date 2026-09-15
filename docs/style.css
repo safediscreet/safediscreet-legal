@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SafeDiscreet - Apple Style Documentation & Legal Stylesheet
+   SafeDiscreet - Apple Style Single-Page Legal Stylesheet
    ========================================================================== */
 
 :root {
@@ -12,7 +12,6 @@
   --border-color: #e5e5ea;
   --table-header-bg: #f2f2f7;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
   --radius-lg: 14px;
   --radius-md: 8px;
   --max-width: 800px;
@@ -29,7 +28,6 @@
     --border-color: #38383a;
     --table-header-bg: #2c2c2e;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -40,11 +38,12 @@
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 17px !important;
   line-height: 1.65 !important;
   background-color: var(--bg-color) !important;
   color: var(--text-primary) !important;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -55,7 +54,6 @@ body {
   background-color: var(--bg-color) !important;
 }
 
-/* Eski inline stilleri ezme */
 span, p, h1, h2, h3, li, td, th, a {
   font-family: inherit !important;
   color: inherit !important;
@@ -90,7 +88,6 @@ h2 {
 p {
   font-size: 1rem !important;
   margin-bottom: 16px !important;
-  color: var(--text-primary) !important;
 }
 
 .subtext {
@@ -98,7 +95,7 @@ p {
   font-size: 0.9rem !important;
 }
 
-/* Dil Seçici Buton Grubu */
+/* Sayfa İçi Dil Atlama Butonları */
 .lang-switch {
   display: inline-flex;
   gap: 4px;
@@ -109,31 +106,23 @@ p {
   border: 1px solid var(--border-color);
 }
 
-.lang-switch a, .lang-switch span {
+.lang-switch a {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 6px 16px;
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none !important;
   border-radius: 6px;
+  color: var(--text-secondary) !important;
   transition: all 0.2s ease;
 }
 
-.lang-switch a {
-  color: var(--text-secondary) !important;
-}
-
 .lang-switch a:hover {
-  color: var(--text-primary) !important;
-}
-
-.lang-switch span.active {
   background-color: var(--card-bg);
   color: var(--accent-color) !important;
   box-shadow: var(--shadow-sm);
 }
 
-/* Bağlantılar */
 a {
   color: var(--accent-color) !important;
   text-decoration: none !important;
@@ -144,7 +133,6 @@ a:hover {
   text-decoration: underline !important;
 }
 
-/* Kart & Tablo Yapısı */
 .nav-card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -156,7 +144,6 @@ a:hover {
 
 .nav-card ul {
   list-style: none;
-  padding: 0;
 }
 
 .nav-card li {
@@ -165,6 +152,12 @@ a:hover {
 
 .nav-card li:last-child {
   margin-bottom: 0;
+}
+
+.section-divider {
+  margin: 60px 0;
+  border: 0;
+  border-top: 2px dashed var(--border-color);
 }
 
 table {
