@@ -1,0 +1,184 @@
+/* ==========================================================================
+   SafeDiscreet Legal & Documentation Stylesheet
+   ========================================================================== */
+
+:root {
+  --bg-color: #fbfbfd;
+  --card-bg: #ffffff;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --accent-color: #0066cc;
+  --accent-hover: #004499;
+  --border-color: #e5e5ea;
+  --table-header-bg: #f2f2f7;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --radius-lg: 14px;
+  --radius-md: 8px;
+  --max-width: 850px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000000;
+    --card-bg: #1c1c1e;
+    --text-primary: #f5f5f7;
+    --text-secondary: #a1a1a6;
+    --accent-color: #2997ff;
+    --accent-hover: #58a6ff;
+    --border-color: #38383a;
+    --table-header-bg: #2c2c2e;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* --- Genel Sıfırlama ve Font Büyütme --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 18px !important; /* Genel yazı boyutu büyütüldü */
+  line-height: 1.65 !important;
+  background-color: var(--bg-color) !important;
+  color: var(--text-primary) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  max-width: var(--max-width);
+  margin: 0 auto !important;
+  padding: 40px 24px 80px 24px !important;
+  background-color: var(--bg-color) !important;
+}
+
+/* HTML içindeki gömülü font ve boyut ayarlarını ezme */
+span, p, h1, h2, h3, li, td, th {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  -webkit-text-stroke: initial !important;
+}
+
+/* --- Başlıklar --- */
+h1 {
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+  margin: 16px 0 12px 0 !important;
+}
+
+h2 {
+  font-size: 1.45rem !important;
+  font-weight: 600 !important;
+  margin-top: 40px !important;
+  margin-bottom: 16px !important;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+p {
+  font-size: 1rem !important;
+  margin-bottom: 18px !important;
+}
+
+/* --- Dil Geçiş Butonları (TR / EN) --- */
+/* HTML'deki p3 sınıfına sahip dil alanını buton grubuna dönüştürür */
+p.p3 {
+  display: inline-flex !important;
+  gap: 6px !important;
+  margin: 16px 0 28px 0 !important;
+  padding: 4px !important;
+  background-color: var(--table-header-bg) !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+p.p3 a, p.p3 span {
+  display: inline-block !important;
+  padding: 6px 16px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Pasif Dil Linki */
+p.p3 a {
+  color: var(--text-secondary) !important;
+  background-color: transparent !important;
+}
+
+p.p3 a:hover {
+  color: var(--text-primary) !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Aktif Dil (Seçili olan) */
+p.p3 span.s2, p.p3 b {
+  background-color: var(--card-bg) !important;
+  color: var(--accent-color) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* --- Bağlantılar --- */
+a {
+  color: var(--accent-color) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* --- Tablo Tasarımı --- */
+table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin: 28px 0 !important;
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg) !important;
+  overflow: hidden !important;
+}
+
+th, td {
+  padding: 16px !important;
+  text-align: left !important;
+  vertical-align: top !important;
+  font-size: 0.95rem !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  width: auto !important;
+}
+
+tr:first-child td {
+  background-color: var(--table-header-bg) !important;
+  font-weight: 600 !important;
+}
+
+tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* --- Mobil Uyumluluk --- */
+@media (max-width: 600px) {
+  html {
+    font-size: 16px !important;
+  }
+  
+  body {
+    padding: 20px 16px 60px 16px !important;
+  }
+
+  h1 {
+    font-size: 1.8rem !important;
+  }
+
+  table {
+    display: block !important;
+    overflow-x: auto !important;
+  }
+}
