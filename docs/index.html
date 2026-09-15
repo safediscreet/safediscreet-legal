@@ -1,21 +1,96 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SafeDiscreet - Yasal Belgeler</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeDiscreet — Legal</title>
+<meta name="description" content="SafeDiscreet privacy policy and terms of use.">
+<link rel="stylesheet" href="style.css">
+<style>
+  .cards { display: grid; gap: 0.9rem; margin-top: 1.75rem; }
+  .card {
+    display: block;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    background: var(--surface);
+    text-decoration: none;
+    color: inherit;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card strong { display: block; font-size: 1.05rem; margin-bottom: 0.25rem; color: var(--accent); }
+  .card span { color: var(--muted); font-size: 0.92rem; }
+</style>
 </head>
 <body>
-  <p class="brand-title">SafeDiscreet</p>
-  <h1>Yasal Belgeler</h1>
-  <p class="subtext">Görüntülemek istediğiniz belgeye tıklayın:</p>
 
-  <div class="nav-card">
-    <ul>
-      <li>📌 <a href="privacy.html">Gizlilik Politikası / Privacy Policy</a></li>
-      <li>📌 <a href="terms.html">Kullanım Koşulları / Terms of Use</a></li>
-    </ul>
-  </div>
+<header class="masthead">
+  <p class="wordmark">SafeDiscreet</p>
+  <h1 data-doc-title>Legal</h1>
+  <p class="dates" data-tagline>Documentation you keep on your own device.</p>
+  <nav class="langbar">
+    <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-set-lang="tr" aria-pressed="false">Türkçe</button>
+  </nav>
+</header>
+
+<main>
+  <section data-lang="en" class="is-active">
+    <div class="lede">
+      <p>SafeDiscreet has no servers, no accounts and no analytics. Nothing you record leaves your iPhone unless you export it yourself.</p>
+    </div>
+    <div class="cards">
+      <a class="card" href="privacy.html"><strong>Privacy Policy</strong><span>What the app stores, where, and why we hold nothing.</span></a>
+      <a class="card" href="terms.html"><strong>Terms of Use</strong><span>How the app may be used, and the subscription terms.</span></a>
+    </div>
+  </section>
+
+  <section data-lang="tr">
+    <div class="lede">
+      <p>SafeDiscreet'in sunucusu, kullanıcı hesabı ve analitiği yoktur. Kaydettiğiniz hiçbir şey, siz dışa aktarmadığınız sürece iPhone'unuzdan çıkmaz.</p>
+    </div>
+    <div class="cards">
+      <a class="card" href="privacy.html"><strong>Gizlilik Politikası</strong><span>Uygulamanın neyi nerede sakladığı ve bizim neden hiçbir şey tutmadığımız.</span></a>
+      <a class="card" href="terms.html"><strong>Kullanım Koşulları</strong><span>Uygulamanın nasıl kullanılabileceği ve abonelik koşulları.</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Muhammet Can Kilic · <a href="mailto:safediscreetrecorder@gmail.com">safediscreetrecorder@gmail.com</a></p>
+</footer>
+
+<script>
+(function () {
+  var titles   = { en: "Legal", tr: "Yasal" };
+  var taglines = {
+    en: "Documentation you keep on your own device.",
+    tr: "Kendi cihazınızda tuttuğunuz belgeleme."
+  };
+
+  function apply(lang) {
+    document.querySelectorAll("[data-lang]").forEach(function (el) {
+      el.classList.toggle("is-active", el.getAttribute("data-lang") === lang);
+    });
+    document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", btn.getAttribute("data-set-lang") === lang ? "true" : "false");
+    });
+    document.documentElement.lang = lang;
+    document.querySelector("[data-doc-title]").textContent = titles[lang];
+    document.querySelector("[data-tagline]").textContent = taglines[lang];
+    try { localStorage.setItem("sd-lang", lang); } catch (e) {}
+  }
+
+  var saved;
+  try { saved = localStorage.getItem("sd-lang"); } catch (e) {}
+  var initial = saved || ((navigator.language || "en").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
+  apply(initial);
+
+  document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+    btn.addEventListener("click", function () { apply(btn.getAttribute("data-set-lang")); });
+  });
+})();
+</script>
+
 </body>
 </html>
